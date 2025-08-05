@@ -28,9 +28,7 @@ Desarrollar modelos de machine learning capaces de prever la cancelación de cli
 | `TelecomX_Data.json`         | Archivo original con la información de clientes.          |
 | `datos_tratados.csv`         | Datos limpios y transformados para el modelado.           |
 
-                       |
 
----
 
 ## 📊 Actividades Realizadas (Challenge Parte 2)
 
@@ -96,7 +94,6 @@ git clone https://github.com/Richie023/Challenge_TelecomX_parte2_Latam.git
 
 👤 Autor [Ricardo Andres Ulloa Araya]
 
-👤 Autor [Ricardo Andres Ulloa Araya]
 
 
 
