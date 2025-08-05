@@ -85,7 +85,7 @@ Desarrollar modelos de machine learning capaces de prever la cancelación de cli
 - Plotly
 - Scikit-learn
 - Imbalanced-learn (SMOTE)
-- Jupyter Notebook / Google Colab
+- Google Colab
 
   📌 Cómo usar este repositorio
 Clona este repositorio:
