@@ -91,7 +91,10 @@ Desarrollar modelos de machine learning capaces de prever la cancelación de cli
 
   📌 Cómo usar este repositorio
 Clona este repositorio:
-git clone https://github.com/tu_usuario/nombre_del_repositorio.git
+git clone https://github.com/Richie023/Challenge_TelecomX_parte2_Latam.git
+
+
+👤 Autor [Ricardo Andres Ulloa Araya]
 
 👤 Autor [Ricardo Andres Ulloa Araya]
 
