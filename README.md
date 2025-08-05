@@ -1,107 +1,99 @@
-📊 Challenge Telecom X – Análisis de Evasión de Clientes (Churn)
-🎯 Misión
-Desarrollar modelos predictivos capaces de prever qué clientes tienen mayor probabilidad de cancelar sus servicios, con el fin de que la empresa pueda anticiparse y tomar acciones de retención.
+# 📊 Challenge Telecom X – Análisis de Evasión de Clientes (Churn)
 
-🧠 Objetivos del Desafío
-Preparar los datos para el modelado (tratamiento, codificación, normalización).
+Este proyecto forma parte del Challenge Telecom X – Parte 2, donde se desarrolla un pipeline de análisis predictivo para anticipar qué clientes tienen mayor probabilidad de cancelar sus servicios (churn). El análisis se enfoca en entender los factores que motivan la evasión y ofrecer soluciones basadas en datos.
 
-Realizar análisis de correlación y selección de variables.
+---
 
-Entrenar dos o más modelos de clasificación.
+## 🎯 Misión
 
-Evaluar el rendimiento de los modelos usando métricas estándar.
+Desarrollar modelos de machine learning capaces de prever la cancelación de clientes, permitiendo a la empresa implementar estrategias de retención antes de que ocurra la pérdida del usuario.
 
-Interpretar los resultados, incluyendo la importancia de las variables.
+---
 
-Elaborar una conclusión estratégica destacando los principales factores de cancelación.
+## 🧠 Objetivos del Desafío
 
-📁 Contenido del Proyecto
-TelecomX_Data.json: Datos originales de clientes.
+- Preparar y transformar los datos para modelado (tratamiento, codificación, normalización).
+- Realizar análisis de correlación y exploración dirigida de variables.
+- Entrenar al menos dos modelos de clasificación.
+- Evaluar los modelos utilizando métricas clave.
+- Interpretar los resultados y la importancia de las variables.
+- Generar una conclusión estratégica basada en datos para reducir la tasa de churn.
 
-datos_tratados.csv: Datos preprocesados (ya con columnas relevantes y variables limpias).
+---
 
-churn_analysis.ipynb: Notebook de análisis con todo el pipeline.
+## 📁 Contenido del Proyecto
 
-Visualizaciones: Gráficos generados con matplotlib, seaborn y plotly.
+| Archivo / Carpeta             | Descripción                                               |
+|------------------------------|-----------------------------------------------------------|
+| `TelecomX_Data.json`         | Archivo original con la información de clientes.          |
+| `datos_tratados.csv`         | Datos limpios y transformados para el modelado.           |
 
-Informe final: Resumen y recomendaciones de negocio.
+                       |
 
-🧹 Limpieza y Tratamiento de Datos
-Pasos realizados:
+---
 
-Importación del dataset.
+## 📊 Actividades Realizadas (Challenge Parte 2)
 
-Limpieza de valores nulos o inconsistentes.
+1. **Extracción del archivo tratado**: Se cargaron datos previamente limpiados.
+2. **Eliminación de columnas irrelevantes**: Se descartaron identificadores y datos no útiles para la predicción.
+3. **Codificación de variables**: Se aplicó One-Hot Encoding a variables categóricas.
+4. **Verificación de la proporción de cancelación (churn)**: Se revisó el balance de clases.
+5. **Balanceo de clases**: Se aplicó SMOTE para mitigar desbalance en los datos.
+6. **Normalización**: Se utilizó `StandardScaler` para modelos basados en distancia.
+7. **Análisis de correlación**: Se visualizó la matriz de correlaciones.
+8. **Análisis dirigido**: Se exploró la relación entre tiempo de contrato, cargos y churn.
+9. **Separación de datos**: Se dividió el conjunto en entrenamiento y prueba (70/30).
+10. **Creación de modelos**:
+    - Modelo 1: Regresión Logística (requiere normalización).
+    - Modelo 2: Random Forest (no requiere normalización).
+11. **Evaluación de modelos**:
+    - Accuracy
+    - Precision
+    - Recall
+    - F1-Score
+    - Matriz de confusión
+12. **Importancia de variables**:
+    - Se interpretaron los coeficientes (Regresión Logística).
+    - Se usó `feature_importances_` en Random Forest.
+13. **Conclusión estratégica**: Se documentaron hallazgos clave y recomendaciones.
 
-Estandarización de variables categóricas.
+---
 
-Ingeniería de características:
+## 📈 Resultados y Conclusiones
 
-cuentas_diarias: Costo diario promedio.
+- Los clientes con **menos servicios contratados** tienen mayor probabilidad de cancelar.
+- Los **contratos mensuales** y **cargos diarios elevados** están relacionados con más churn.
+- Los **clientes nuevos** (con menos meses en la empresa) son más propensos a abandonar.
+- La presencia de servicios como **soporte técnico**, **seguridad online** e **internet** se asocia a mayor retención.
 
-cantidad_servicios: Total de servicios activos contratados.
+---
 
-Codificación binaria (0 y 1) y one-hot encoding para variables categóricas.
+## 🧭 Recomendaciones
 
-📊 Análisis Exploratorio de Datos (EDA)
-Se exploraron las siguientes relaciones:
+- Promover **contratos de mayor duración** para reducir cancelaciones mensuales.
+- Ofrecer **paquetes combinados de servicios** para incrementar el valor percibido.
+- Identificar clientes con **alto riesgo de churn** y aplicar campañas de fidelización.
+- Evaluar la estructura de **tarifas y cargos diarios**.
+- Monitorear activamente a **clientes nuevos en sus primeros meses**.
 
-Distribución global de clientes que cancelan (churn).
+---
 
-Comparación por género, tipo de contrato y forma de pago.
+## 🛠️ Tecnologías Usadas
 
-Relación entre cantidad_servicios y churn.
+- Python 3
+- Pandas
+- Seaborn
+- Matplotlib
+- Plotly
+- Scikit-learn
+- Imbalanced-learn (SMOTE)
+- Jupyter Notebook / Google Colab
 
-Distribución de cuentas_diarias por clase.
+  📌 Cómo usar este repositorio
+Clona este repositorio:
+git clone https://github.com/tu_usuario/nombre_del_repositorio.git
 
-Matriz de correlación entre variables numéricas.
+👤 Autor [Ricardo Andres Ulloa Araya]
 
-📈 Visualizaciones utilizadas
-Gráficos de barras y torta (pie).
 
-Violin plots y boxplots (Plotly).
-
-Heatmap de correlación.
-
-💡 Conclusiones del Análisis
-Los clientes con menos servicios contratados tienen mayor propensión a abandonar.
-
-Los contratos mensuales y cargos diarios altos están asociados con más churn.
-
-Clientes nuevos (pocos meses de contrato) tienden a cancelar más.
-
-Los clientes con internet, soporte técnico y seguridad tienden a permanecer más tiempo.
-
-🧭 Recomendaciones Estratégicas
-Promover contratos anuales o de mayor duración.
-
-Crear paquetes combinados de servicios para aumentar el valor percibido.
-
-Identificar y monitorear a clientes en riesgo de churn.
-
-Evaluar y optimizar la estructura de precios y cargos diarios.
-
-Aplicar campañas de fidelización especialmente en los primeros meses del contrato.
-
-🛠️ Tecnologías Usadas
-Python 3
-
-Pandas
-
-Seaborn
-
-Matplotlib
-
-Plotly
-
-Scikit-learn
-
-Imbalanced-learn (SMOTE)
-
-Google Colab 
-
-📌 Cómo usar el proyecto
-
-git clone https://github.com/Richie023/TelecomX_LATAM_challenge.git
-👤 Autor: Ricardo Andrés Ulloa Araya
 
